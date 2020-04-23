@@ -32,7 +32,7 @@
   - **웹스퀘어 엔진**은 lib 에 jar 파일로 있다.(websquare_5.0_4.3993B.20200326.113812_1.5.jar)
 
   -  web.xml
-  <![CDATA[<servlet>
+  <!--     <servlet>
 		<servlet-name>websquareDispatcher</servlet-name>
 		<servlet-class>websquare.http.DefaultRequestDispatcher</servlet-class>
 		<init-param>
@@ -43,7 +43,7 @@
 	   <servlet-mapping>
 		<servlet-name>websquareDispatcher</servlet-name>
 		<url-pattern>*.wq</url-pattern>
-	   </servlet-mapping>]]>
+	   </servlet-mapping>]-->
 
   - C:\WRM\RESOURCE\WS5\websquare_home\config 여기에 있는 websqaure.xml 이 환경설정 파일
 
