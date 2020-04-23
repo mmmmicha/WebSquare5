@@ -43,7 +43,7 @@
 	   <servlet-mapping>
 		<servlet-name>websquareDispatcher</servlet-name>
 		<url-pattern>*.wq</url-pattern>
-	   </servlet-mapping>]>
+	   </servlet-mapping>]]>
 
   - C:\WRM\RESOURCE\WS5\websquare_home\config 여기에 있는 websqaure.xml 이 환경설정 파일
 
