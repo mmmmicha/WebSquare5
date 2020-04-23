@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+        </xf:model>
+         <script type="text/javascript" lazy="false"><![CDATA[
+        
+	scwin.onpageload = function() {
+		
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<xf:input adjustMaxLength="false" id="" style="position:absolute;top:144px;left:312px;width:260px;height:56px;"></xf:input>
+    	<xf:group id="" style="border: 2px solid grey;padding: 10px;overflow: hidden;margin-bottom: 10px">
+    		<w2:span id="" label="1.첫번째: " style="margin-right: 10px;"></w2:span>
+    		<xf:input adjustMaxLength="false" id="" style="width: 144px;height:25px;margin-right:10px;"></xf:input>
+    		<w2:span id="" label="2. 두번째" style="margin-right:10px;"></w2:span>
+    		<xf:input adjustMaxLength="false" id="" style="width: 144px;height:25px;margin-right:10px;"></xf:input>
+    		<xf:trigger id="" style="width: 80px;height: 23px;float : right;" type="button">
+    			<xf:label><![CDATA[조회]]></xf:label>
+    		</xf:trigger>
+    		<xf:trigger class="dmr btnDef" id="" style="width: 80px;" type="button">
+    			<xf:label><![CDATA[label]]></xf:label>
+    		</xf:trigger>
+    		<xf:group class="box_ratio" id="" style="">
+    			<xf:group class="pct40" id="" style=""></xf:group>
+    			<xf:group class="pct60" id="" style=""></xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>

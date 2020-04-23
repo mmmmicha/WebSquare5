@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/ws5/css/edu.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+    	<w2:buildDate />
+    	<xf:model>
+    		<xf:instance>
+    			<data xmlns="" />
+    		</xf:instance>
+    		<w2:dataCollection baseNode="map"></w2:dataCollection>
+    		<w2:workflowCollection></w2:workflowCollection>
+    	</xf:model>
+    	<script type="text/javascript" src="/ws5/js/holiday.js"></script>
+    	<script type="text/javascript" lazy="false"><![CDATA[
+        
+	scwin.onpageload = function() {
+		ipt1.setValue("987654321");
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	
+	scwin.ipt1_onviewchange = function(info) {
+		debugger;
+		alert(info.newValue);
+	};
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<xf:input adjustMaxLength="false" id="ipt1" style="width: 144px;height: 21px;background: orange;" placeholder="입력하세요." initValue="123456789" displayFormat="#,###" dataType="number" applyFormat="all" ev:onviewchange="scwin.ipt1_onviewchange"></xf:input>
+    	<xf:input adjustMaxLength="false" id="" style="width:298px;height:48px;"></xf:input>
+    </body>
+</html>
