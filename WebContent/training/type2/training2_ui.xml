@@ -293,7 +293,7 @@
     			showSortableUseFilter="false" style="height: 250px;margin-bottom: 10px;" summaryAuto="false" summaryOnlyAuto="false"
     			useFilterList="true" useShiftKey="true" fixedColumn="0" autoFit="allColumn" autoFitMinWidth="700" rowNumVisible="true"
     			rowNumHeaderValue="No" rowNumWidth="50" sortable="true" sortEvent="ondblclick" focusMode="row" columnMove="true"
-    			ev:oncellclick="scwin.ui_grd_oncellclick" rowStatusVisible="true" rowStatusHeaderValue="상태" checkEditableInputClass="">
+    			ev:oncellclick="scwin.ui_grd_oncellclick" rowStatusVisible="true" rowStatusHeaderValue="상태" checkEditableInputClass="" customFilterBox="">
     			<w2:caption style="" id="caption2" value="this is a grid caption."></w2:caption>
     			<w2:header style="" id="header2">
     				<w2:row style="" id="row3">
