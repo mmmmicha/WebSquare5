@@ -162,3 +162,75 @@
     예제 : http://127.0.0.1:8080/ws5/?w2xPath=/ws5/sample/pageScope/wframeScope.xml
     이건 자식의 자식의 자식의 자식 예제
 
+<h2>2일차</h2>
+
+- textbox 와 span 의 차이
+  긴거 쓸 경우, 짧은거 혹은 변화가 잦은거 쓰는 경우
+
+- Controller 를 어떻게 설정하느냐에 따라 input을 한꺼번에 주어 submission 을 한번만 수행할 수도 있음.(submission 을 여러번 수행하는 것도 결국 자원소모이기 때문에 될 수 있으면 적은 submission 으로 데이터 교환을 해결하는게 좋다)
+  TrainingController.java 꼭 확인하기!!!
+
+- eduCommon.js 에 setCommonCode 메소드 확인해보기
+  알아서 DataCollection 생성해주고 데이터 매핑 해주고 submission 까지 해줌.(이건 공용프로그램개발자들이 주로 건드림. WRM 교육 받게되면 이런것들도 배울 수 있음)
+
+- getvalue 로 직접 값을 설정하기보다 ref 를 적극적으로 활용할것!!!
+  (ref 또는 setNodeSet())
+
+- GridView ?? 실질적으로는 그저 display 역할 뿐
+  - 진짜매우중요!! 얘는 DataList 라는 짝꿍이 있다. 그냥 DataList 가 전부다.
+  - gridview 에 DataCollection에서 원하는 것을 드래그해서 놓으면 자동으로 매핑까지 다 해줌
+
+  - autoFit 이라는 속성이 있음
+  - 반응형웹을 위해서 autoFitMinWidth도 설정해야함 (보통 700)
+  - rownum 이라는 속성이 있음 (true 면 rownum 이 보임)
+  - rownum 과 관련된 편집은 무조건 rownum 이 붙은 속성들로 컨트롤 해야함
+  - sort 기능도 있음.
+  - sortEvent 로는 원클릭, 더블클릭을 설정할 수 있음.
+  - grid 전체적으로 말고 셀자체만도 sortable 을 설정할 수 있음.
+  - filter 속성도 있음.(셀만지정할 수도 있고, grid 속성으로도 할 수 있음)
+    (필터를 콤보박스로 사용하고 싶으면 우선적으로 컬럼을 지정해서 filter 설정을 한 후에 grid 에서 useFilterList 까지 true 로 해줘야 한다)
+  - readOnly 속성도 있음(각 컬럼)
+  - focusMode 라는 속성이 있음(컬럼전체 또는 로우전체 등등)
+  - 정렬(align) 속성도 있음
+  - displayFormmat 이라는 속성도 있음(ex. ###-### 등)
+    (로직이 들어가서 경우에 따라 다르게 표현해야 할 때는 안됨!!)
+  - displayFormmatter는 이를 표현할 수 있음(함수를 직접만들어서 사용하는 것임)
+  - columMove 라는 속성이 있음(자유자재로 바꿀 수 있음 페이지 내에서)
+  - 고정은 fixed
+
+  - 중요 datamapping 을 component 랑 collection 을 해놨을 때, 페이지내에서 데이터를 바꾸게 되면 조회되는 데이터도 바뀐다. 이를 방지하기 위해서는 readOnly등이 필요하다.
+
+  - 중요!! 데이터를 조작하는 것은 무조건 DataList 다.
+  - rowState 는 CRUD 를 나타내주는, 자동적으로 만들어지는 행이다.(페이지에서 웹스퀘어5 지원페이지에서 확인할 수 있음)
+  - 이와 연관되어 있는 property 는 rowstatusVisible 이다.
+
+  - delete 는 일종의 마킹만 하는 거고
+  - remove 는 진짜로 데이터를 삭제하는 것이다.
+  
+  - check 박스를 다루는 과정에서 ignoreStatus 라는 속성이 있다.
+    (true 이면 CRUD 를 표시하지 않음.)
+
+  - DataCollection 에도 이벤트를 적용할 수 있다. 가령 데이터가 바뀐다거나 할 때 일어나는 이벤트 등등...
+
+  - 중요!! grid의 컬럼을 변경하려면 dataList 를 재정의한 후에 grid 를 다시 업데이트 해야한다.
+  - 컬럼명 들어가는 곳에 checkbox 로 하면 전체 선택기능도 사용할 수 있음.
+
+  - removeAll 이라는 API 가 있다.
+
+  - dataCollection을 만들 때 action 속성 'modified' 를 지정하면 데이터가 변경됐는지 여부를 확인할 수 있다.
+
+  - grid 를 엑셀로 변환해서 내릴수 있는 기능이 있다.
+
+  - 엑셀 연동 기능에서 hidden 속성을 사용하게 되면 페이지에서는 해당 속성이 보여지지 않지만 엑셀로 다운로드 할 때는 표현이 된다.(ex. 주소2)
+  - hidden 해놓고 디자인 탭에서 뭘숨겼는지 보려면 마우스 우클릭해서 숨긴셀 보기 할 수 있다.
+
+  - footer 만들기
+    - 그리드에 마우스 우클릭 후 footer 추가 클릭
+    - 급여 컬럼 속성 확인하기!!!( ,inputtype, expression)
+
+    - 더 디테일하게 소계, 중계 처리같은 경우는 또다른 property를 적용할 수 있다.
+
+
+** 선생님의 조언
+
+   - 페이지구현 part 에 4번에는 scrollEnd 이벤트를 이용하여 만든 흥미로운 예제가 있다.
