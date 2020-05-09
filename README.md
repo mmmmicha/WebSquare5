@@ -10,10 +10,11 @@ webSquare5_Document link : https://wtech.inswave.kr/websquare/websquare.html?w2x
    > - No Active X, No Runtime, Only Standard 를 가능케 함.
    
    > - 특징<br>
-       1. Open Architecture<br>
-       2. HTML5 Standards 적용<br>
-       3. Adaptive Web Component 제공<br>
-       4. One Source Multi Use 지원<br>
+   
+       1. Open Architecture
+       2. HTML5 Standards 적용
+       3. Adaptive Web Component 제공
+       4. One Source Multi Use 지원
        5. 통합개발도구 지원
      
    > - DataCollection 이란?<br>
@@ -24,19 +25,17 @@ webSquare5_Document link : https://wtech.inswave.kr/websquare/websquare.html?w2x
        5. script 에서의 객체 접근은 객체의 id명으로 가능하며 DataCollection(최상위)에 접근하는 경우는 $w.data 객체를 사용함
      
    > - Data 객체의 종류<br>
+   
        1. DataCollection<br>
           - Data 객체를 담는 최상위 객체로 그롯에 해당<br>
           - $w.data로 접근이 가능하며 전체 데이터 객체를 제어할 수 있음<br>
-          - Java의 Map 과 흡사<br>
-     
+          - Java의 Map 과 흡사
        2. DataMap<br>
           - Key와 Value로 이루어진 단일 데이터의 객체<br>
           - Java의 Map 과 흡사<br>
-        
        3. DataList<br>
           - List 형태의 다건의 데이터로 구성된 객체<br>
-          - Java의 List 와 흡사<br>
-        
+          - Java의 List 와 흡사<br>  
        4. LinkedDataList<br>
           - DataList 객체를 참고하여 Filter, Sort를 적용한 객체<br>
           - 기준되는 DataList 객체가 꼭 필요
