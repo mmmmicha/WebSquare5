@@ -18,32 +18,34 @@ webSquare5_Document link : https://wtech.inswave.kr/websquare/websquare.html?w2x
        5. 통합개발도구 지원
      
    > - DataCollection 이란?<br>
-       1. 데이터 객체들의 저장소(서버와 통신하기 위한 request, response 객체와 UI구현을 위한 임시 데이터 객체들이 존재)<br>
-       2. 데이터 객체의 종류 : DataMap, DataList, LinkedDataList<br>
-       3. 각 객체는 JSON, XML, 1차원 Array 형태의 데이터로 설정하거나 변환이 가능<br>
-       4. 각 객체는 id 가 필수<br>
+   
+       1. 데이터 객체들의 저장소(서버와 통신하기 위한 request, response 객체와 UI구현을 위한 임시 데이터 객체들이 존재)
+       2. 데이터 객체의 종류 : DataMap, DataList, LinkedDataList
+       3. 각 객체는 JSON, XML, 1차원 Array 형태의 데이터로 설정하거나 변환이 가능
+       4. 각 객체는 id 가 필수
        5. script 에서의 객체 접근은 객체의 id명으로 가능하며 DataCollection(최상위)에 접근하는 경우는 $w.data 객체를 사용함
      
    > - Data 객체의 종류<br>
    
-       1. DataCollection<br>
-          - Data 객체를 담는 최상위 객체로 그롯에 해당<br>
-          - $w.data로 접근이 가능하며 전체 데이터 객체를 제어할 수 있음<br>
+       1. DataCollection
+          - Data 객체를 담는 최상위 객체로 그롯에 해당
+          - $w.data로 접근이 가능하며 전체 데이터 객체를 제어할 수 있음
           - Java의 Map 과 흡사
-       2. DataMap<br>
-          - Key와 Value로 이루어진 단일 데이터의 객체<br>
-          - Java의 Map 과 흡사<br>
-       3. DataList<br>
-          - List 형태의 다건의 데이터로 구성된 객체<br>
-          - Java의 List 와 흡사<br>  
-       4. LinkedDataList<br>
-          - DataList 객체를 참고하여 Filter, Sort를 적용한 객체<br>
+       2. DataMap
+          - Key와 Value로 이루어진 단일 데이터의 객체
+          - Java의 Map 과 흡사
+       3. DataList
+          - List 형태의 다건의 데이터로 구성된 객체
+          - Java의 List 와 흡사
+       4. LinkedDataList
+          - DataList 객체를 참고하여 Filter, Sort를 적용한 객체
           - 기준되는 DataList 객체가 꼭 필요
 
-   > - Submission 이란?<br>
-       - ajax로 구현되어 있는 통신 모듈<br>
-       - 일반적으로 request, response 데이터는 DataCollection에 정의한 데이터 객체와 연동<br>
-       - request는 reference로 표현<br>
+   > - Submission 이란?
+   
+       - ajax로 구현되어 있는 통신 모듈
+       - 일반적으로 request, response 데이터는 DataCollection에 정의한 데이터 객체와 연동
+       - request는 reference로 표현
        - response는 target으로 표현 및 표기 됨
 
 ------------------------------------------------------------------------------------------------------------------------------
