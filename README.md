@@ -1,4 +1,4 @@
-# WebSquare5Study
+# WebSquare5
 
 - [webSquare5_Document link](https://wtech.inswave.kr/websquare/websquare.html?w2xPath=/ws/index.xml&inPath=edu)
 
