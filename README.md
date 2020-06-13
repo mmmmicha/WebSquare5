@@ -1,6 +1,6 @@
-# WebSquare5_Study
+# WebSquare5Study
 
-webSquare5_Document link : https://wtech.inswave.kr/websquare/websquare.html?w2xPath=/ws/index.xml&inPath=edu
+- [webSquare5_Document link](https://wtech.inswave.kr/websquare/websquare.html?w2xPath=/ws/index.xml&inPath=edu)
 
 일시 : 2020-04-23 ~ 2020-04-24
 
