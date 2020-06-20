@@ -57,7 +57,7 @@
 - 특징
   - xml 파일에서 디자인을 하게 되는데(뷰파일을 만들더라도 자동적으로 xml 확장자가 붙음)
   - 먼저 브라우저를 실행하게 되면 웹스퀘어 엔진을 먼저 로딩하게 되고 이 엔진이 xml 내 객체들을 html dom 으로 변환됨.
-    (`<w2: >`, `<xf: >` 이 태그들을 변환함)
+    - `<w2: >`, `<xf: >` 이 태그들을 변환함
   - javascript 나 jquery 사용이 가능하지만, jquery 는 일부 충돌이 나는 경우가 있다.
   - 디자인도 그대로 css를 사용
   - **form 태그를 사용할 수는 있지만 ajax를 기본으로 사용함. --> submission 이라는 데이터통신모듈을 사용하게됨.**
@@ -120,12 +120,12 @@
   - datatype default 형은 text
 
   - 기본적으로 내장하고 있는 Editor 는 CKEditor
-  	- (OEM 으로 Editor 를 적용한거임)
-  	- (OEM은 주문자의 의뢰에 따라 주문자의 상표를 부착하여 판매할 상품을 제작하는 업체를 의미한다.)
+  	- OEM 으로 Editor 를 적용한거임
+  	- OEM은 주문자의 의뢰에 따라 주문자의 상표를 부착하여 판매할 상품을 제작하는 업체를 의미한다.
 
   - 각종 예시들을 제공해줌(websquare 교육 사이트!!)
   - button 을 쓰고 싶을 때는 trigger component 내 속성을 button 으로 사용하면 됨.
-  	- (`<a>`를 나타내는 anchor, `<image>`를 나타내는 image 도 가능하다.)
+  	- `<a>`를 나타내는 anchor, `<image>`를 나타내는 image 도 가능하다.
 
   - 업로드에 대한 설정은 websquare.xml 에 초기 설정에 되어있으니 확인할것.
   - 멀티업로드는 flash 내지 html5_transport
@@ -133,7 +133,7 @@
   - project explorer 에서 **ctrl+shift+r** 단축키는 파일 찾기
 
   - div 는 group 이라는 component 가 대체
-  	- (component 를 group 짓게 되면 css 를 적용해서 일괄적인 control을 하는데 매우 유용하다.)
+  	- component 를 group 짓게 되면 css 를 적용해서 일괄적인 control을 하는데 매우 유용하다.
 
   - generator 와 grid 의 차이
     	- 댓글관리도 generator
@@ -151,10 +151,10 @@
 
   - 이론문서에 보면 'UI Design' 파트가 있음.
      - 여기에 static/absolute position 이 있음.
-       - (도형을 자유자재로 위치조정을 할 수 있게 만들거나 아니면 고정적으로 하거나)
+       - 도형을 자유자재로 위치조정을 할 수 있게 만들거나 아니면 고정적으로 하거나
        - 하지만 absolute 는 가급적 사용하지 않는게 좋다(랜더링하는게 뒤죽박죽될수 있고 이는 ux측면에서 아주 안좋음)
   - snippet 이라는 효율적인 모듈화 기능이 있다.(import/export 가 가능하다)
-     -(보통 publisher가 이를 만들어서 export 해주면 개발자가 import 해서 사용한다.)
+     - 보통 publisher가 이를 만들어서 export 해주면 개발자가 import 해서 사용한다.
 
   - 웹 렌더링에는 block 단위와 inline 단위가 있다.
   - css overflow 속성에대해 알아보기
@@ -236,7 +236,7 @@
   - focusMode 라는 속성이 있음(컬럼전체 또는 로우전체 등등)
   - 정렬(align) 속성도 있음
   - displayFormmat 이라는 속성도 있음(ex. ###-### 등)
-    - (로직이 들어가서 경우에 따라 다르게 표현해야 할 때는 안됨!!)
+    - 로직이 들어가서 경우에 따라 다르게 표현해야 할 때는 안됨!!
   - displayFormmatter는 이를 표현할 수 있음(함수를 직접만들어서 사용하는 것임)
   - columMove 라는 속성이 있음(자유자재로 바꿀 수 있음 페이지 내에서)
   - 고정은 fixed
@@ -251,7 +251,7 @@
   - remove 는 진짜로 데이터를 삭제하는 것이다.
   
   - check 박스를 다루는 과정에서 ignoreStatus 라는 속성이 있다.
-    - (true 이면 CRUD 를 표시하지 않음.)
+    - true 이면 CRUD 를 표시하지 않음.
 
   - DataCollection 에도 이벤트를 적용할 수 있다. 가령 데이터가 바뀐다거나 할 때 일어나는 이벤트 등등...
 
