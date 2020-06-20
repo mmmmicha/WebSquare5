@@ -61,7 +61,7 @@
   - javascript 나 jquery 사용이 가능하지만, jquery 는 일부 충돌이 나는 경우가 있다.
   - 디자인도 그대로 css를 사용
   - **form 태그를 사용할 수는 있지만 ajax를 기본으로 사용함. --> submission 이라는 데이터통신모듈을 사용하게됨.**
-  - data를 매핑하는 측면에서 json, xml 형식의 데이터 다 호완됨
+  - data를 매핑하는 측면에서 json, xml 형식의 데이터 다 호됨
   - 화면소스스펙은 Xforms 을 따른다.
   - JDK 1.5 이상이면 사용가능하다.(J2EE 기반이면 다 된다고 보면 된다.)
 
@@ -78,17 +78,17 @@
   -  web.xml
 ```
   <![CDATA[<servlet>
-		<servlet-name>websquareDispatcher</servlet-name>
-		<servlet-class>websquare.http.DefaultRequestDispatcher</servlet-class>
-		<init-param>
-			<param-name>WEBSQUARE_HOME</param-name>
-			<param-value>C:\WRM\RESOURCE\WS5\websquare_home</param-value>
-		</init-param>
-	   </servlet>
-	   <servlet-mapping>
-		<servlet-name>websquareDispatcher</servlet-name>
-		<url-pattern>*.wq</url-pattern>
-	   </servlet-mapping>]]>
+	<servlet-name>websquareDispatcher</servlet-name>
+	<servlet-class>websquare.http.DefaultRequestDispatcher</servlet-class>
+	<init-param>
+		<param-name>WEBSQUARE_HOME</param-name>
+		<param-value>C:\WRM\RESOURCE\WS5\websquare_home</param-value>
+	</init-param>
+   </servlet>
+   <servlet-mapping>
+	<servlet-name>websquareDispatcher</servlet-name>
+	<url-pattern>*.wq</url-pattern>
+   </servlet-mapping>]]>
 ```
   
   - C:\WRM\RESOURCE\WS5\websquare_home\config 여기에 있는 websqaure.xml 이 환경설정 파일
@@ -97,21 +97,22 @@
 
   - 모든 웹스퀘어 페이지들은 websquare.html 내 body 에 렌더링이 되는 개념이다.
 
-  - javascipt 에서 scwin 의 하위로 메소드나 변수들을 사용하는 이유는 웹스퀘어엔진이 메모리관리를 자동적으로 해줌. 사용하고난 후 반납이라던가 이런것들.
-  - 즉, scwin 을 전역객체로 default해놓음.
+  - javascipt 에서 scwin 의 하위로 메소드나 변수들을 사용하는 이유는 웹스퀘어 엔진이 메모리관리를 자동적으로 해줌. 사용하고난 후 반납 등...
+  - 즉, scwin 을 전역객체로 default 해놓음.
 
   - **참고**
-```
-     javascript 코딩을 할 때
+    - javascript 코딩을 할 때
+```     
     {
 	var sc = "";
             function scc(){
             
 	}
      }
-   이런식으로 호출을 해 놓으면 데이터의 수명관리를 직접적으로 해줘야함.
-   그렇기 때문에 객체를 하나 만들고 그 객체의 하위 변수 또는 하위 함수로 만들어서 부모객체를 컨트롤 하는 방법을 주로 사용한다.
-```
+```     
+   - 이런식으로 호출을 해 놓으면 데이터의 수명관리를 직접적으로 해줘야함. 
+   - 그렇기 때문에 객체를 하나 만들고 그 객체의 하위 변수 또는 하위 함수로 만들어서 부모객체를 컨트롤 하는 방법을 주로 사용한다.
+
    
   - **onpageload** : DOM 객체들이 모두 load된 후에 작동되는 메소드. init 함수 사용할 거면 **onpageload** 에 사용할 것!
   	- (init 을 쓰게되면 DOM 객체들이 제대로 load되지도 않았는데 그 내부 객체들을 불러내는 호출이 일어나는 것이기 때문에 에러가 생긴다.)
@@ -124,12 +125,12 @@
 
   - 각종 예시들을 제공해줌(websquare 교육 사이트!!)
   - button 을 쓰고 싶을 때는 trigger component 내 속성을 button 으로 사용하면 됨.
-  	- (<a>를 나타내는 anchor, <image>를 나타내는 image 도 가능하다.)
+  	- (`<a>`를 나타내는 anchor, `<image>`를 나타내는 image 도 가능하다.)
 
   - 업로드에 대한 설정은 websquare.xml 에 초기 설정에 되어있으니 확인할것.
   - 멀티업로드는 flash 내지 html5_transport
 
-  - project explorer 에서 ctrl+shift+r 단축키는 파일 찾기
+  - project explorer 에서 **ctrl+shift+r** 단축키는 파일 찾기
 
   - div 는 group 이라는 component 가 대체
   	- (component 를 group 짓게 되면 css 를 적용해서 일괄적인 control을 하는데 매우 유용하다.)
@@ -177,7 +178,7 @@
 
   - **중요!! Submit-done 에서 콜백함수 설정을 할 수가 있음. 그래서 synch 가 아니어도 비동기방식으로 순서제어를 할 수가 있음.**
 
-  - Add submission 에서 Instance, Replace 는 지금은 사용안한다. 무시하면 됨.
+  - Add submission 에서 ~~Instance, Replace~~ 는 지금은 사용안한다. 무시하면 됨.
   - Custom Handler 는 전처리기(서버로 보내기 직전에 사용됨, 근데 잘 사용안함)
   - Error Handler 는 후처리기(200미만 400이상일 땐 안됨, 직접작성할일 거의없음(공통개발자가 작성함)) 
   - processMessage : 조회중... (통신하는동안 로딩중을 주고 disable이 되어버려서 다른 것들에서 접근이 불가능해짐)
